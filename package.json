@@ -1,0 +1,77 @@
+{
+    "name": "open-current-project-in-iterm2",
+    "displayName": "open current project in iterm2",
+    "description": "在iterm2中打开当前项目",
+    "version": "0.0.5",
+    "publisher": "haohailiang",
+    "author": {
+        "name": "haohailiang",
+        "email": "646263409@qq.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/haohailiang/vscode-open-iterm2.git"
+    },
+    "homepage": "https://github.com/haohailiang/vscode-open-iterm2/blob/master/README.md",
+    "bugs": {
+        "url": "https://github.com/haohailiang/vscode-open-iterm2/issues"
+    },
+    "icon": "res/icon.png",
+    "keywords": [
+        "iTerm2",
+        "iterm2",
+        "terminal"
+    ],
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.openCurProjectPath"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.openCurProjectPath",
+                "title": "在iterm2中打开当前项目"
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "command": "extension.openCurProjectPath"
+                }
+            ],
+            "editor/context": [
+                {
+                    "command": "extension.openCurProjectPath"
+                }
+            ],
+            "editor/title": [
+                {
+                    "command": "extension.openCurProjectPath"
+                }
+            ],
+            "editor/title/context": [
+                {
+                    "command": "extension.openCurProjectPath"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "compile": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.0.3",
+        "vscode": "^1.0.0",
+        "mocha": "^2.3.3",
+        "@types/node": "^6.0.40",
+        "@types/mocha": "^2.2.32"
+    }
+}
