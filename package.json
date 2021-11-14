@@ -2,7 +2,7 @@
     "name": "open-current-project-in-iterm2",
     "displayName": "open current project in iterm2",
     "description": "在iterm2中打开当前项目",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "publisher": "haohailiang",
     "author": {
         "name": "haohailiang",
